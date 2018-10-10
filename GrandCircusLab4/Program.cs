@@ -19,21 +19,21 @@ namespace GrandCircusLab4
             string cont = "y";
             Console.WriteLine("Make a table of squares and cubes!");
 
-            while (cont == "y")
+            while (cont == "y") 
             {
                 Console.Write("Enter a positive integer: ");
                 int cubeLimit;
-                while (!int.TryParse(Console.ReadLine(), out cubeLimit) || cubeLimit < 1)
+                while (!int.TryParse(Console.ReadLine(), out cubeLimit) || cubeLimit < 1) //only allows positive whole numbers as input
                 {
                     Console.Write("That's not a positive integer. Please try again: ");
                 }
                 int count = 1;
                 Console.WriteLine("\n");
-                Console.WriteLine(string.Format("{0,6} {1,12} {2,10}","Number:","Squared:","Cubed:"));
+                Console.WriteLine(string.Format("{0,6} {1,12} {2,10}","Number:","Squared:","Cubed:")); //string formatting
                 Console.WriteLine(string.Format("{0,6} {1,12} {2,10}", "======","======","====="));
                 do
                 {
-                    Console.WriteLine(string.Format("{0,6} {1,12} {2,10}", count, (count * count), (count * count * count)));
+                    Console.WriteLine(string.Format("{0,6} {1,12} {2,10}", count, (count * count), (count * count * count))); //slightly messier string formatting
                     count += 1;
                 } while (count <= cubeLimit);
 
